@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>장바구니 - WOODPLACE</title>
+
+    <!-- Google Fonts - Pretendard -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pretendard:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+  </head>
+
+  <body>
+    <!-- ===== Header ===== -->
+    <header class="header">
+      <div class="container">
+        <div class="header-top">
+          <!-- 로고 -->
+          <a href="index.html" class="header-logo">WOODPLACE</a>
+
+          <!-- 네비게이션 -->
+          <nav class="header-nav">
+            <ul class="nav-list">
+              <li><a href="#" class="nav-link">전체 카테고리</a></li>
+              <li><a href="#" class="nav-link">거실</a></li>
+              <li><a href="#" class="nav-link">침실</a></li>
+              <li><a href="#" class="nav-link">주방·식탁</a></li>
+              <li><a href="#" class="nav-link">수납·서재</a></li>
+              <li><a href="#" class="nav-link">아웃도어 소품</a></li>
+            </ul>
+          </nav>
+
+          <!-- 검색창 -->
+          <form class="header-search" id="searchForm">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="상품명, 브랜드 검색"
+              autocomplete="off"
+            />
+            <button type="submit" title="검색">
+              <span class="material-icons">search</span>
+            </button>
+          </form>
+
+          <!-- 아이콘 -->
+          <div class="header-icons">
+            <a href="login.html" class="icon-btn" title="로그인">
+              <span class="material-icons">account_circle</span>
+            </a>
+            <a href="#" class="icon-btn" title="찜">
+              <span class="material-icons">favorite_border</span>
+            </a>
+            <a href="cart.html" class="icon-btn badge" title="장바구니">
+              <span class="material-icons">shopping_cart</span>
+              <span class="badge-count hidden">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== Main Content ===== -->
+    <main class="main-content">
+      <div class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb" style="margin-top: var(--spacing-3xl)">
+          <span class="breadcrumb-item">
+            <a href="index.html">홈</a>
+          </span>
+          <span class="breadcrumb-separator">></span>
+          <span class="breadcrumb-item active">장바구니</span>
+        </div>
+
+        <!-- 페이지 제목 -->
+        <h1 style="font-size: var(--font-size-3xl); margin-bottom: var(--spacing-2xl)">
+          장바구니
+        </h1>
+
+        <!-- 장바구니 페이지 -->
+        <div class="cart-page">
+          <!-- 장바구니 아이템 -->
+          <div class="cart-items" id="cartItems">
+            <!-- 장바구니가 비어있을 때 -->
+            <div class="empty-cart">
+              <div class="empty-cart-icon">
+                <span class="material-icons" style="font-size: 64px; display: block">
+                  shopping_cart
+                </span>
+              </div>
+              <div class="empty-cart-text">장바구니가 비어있습니다</div>
+              <a href="product-list.html" class="btn btn-primary">
+                쇼핑 계속하기
+              </a>
+            </div>
+          </div>
+
+          <!-- 주문 요약 -->
+          <div class="cart-summary" id="cartSummary" style="display: none">
+            <div class="summary-title">주문 요약</div>
+
+            <div class="summary-row">
+              <span>상품가격</span>
+              <span id="subtotal">0원</span>
+            </div>
+
+            <div class="summary-row">
+              <span>배송료</span>
+              <span id="shipping">무료</span>
+            </div>
+
+            <div class="summary-row">
+              <span>할인</span>
+              <span id="discount">-</span>
+            </div>
+
+            <div class="summary-row total">
+              <span>총 결제액</span>
+              <span class="amount" id="total">0원</span>
+            </div>
+
+            <button class="btn btn-primary checkout-btn">
+              <span class="material-icons" style="margin-right: var(--spacing-md)">
+                payment
+              </span>
+              결제하기
+            </button>
+
+            <div class="continue-shopping">
+              <a href="product-list.html" style="color: inherit">쇼핑 계속하기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- 고객서비스 -->
+          <div class="footer-section">
+            <h3 class="footer-title">고객서비스</h3>
+            <a href="#" class="footer-link">공지사항</a>
+            <a href="#" class="footer-link">자주 묻는 질문</a>
+            <a href="#" class="footer-link">1:1 상담</a>
+            <a href="#" class="footer-link">제품 A/S</a>
+          </div>
+
+          <!-- 회사정보 -->
+          <div class="footer-section">
+            <h3 class="footer-title">회사정보</h3>
+            <a href="#" class="footer-link">회사소개</a>
+            <a href="#" class="footer-link">채용정보</a>
+            <a href="#" class="footer-link">협력사 제휴</a>
+            <a href="#" class="footer-link">언론보도</a>
+          </div>
+
+          <!-- 약관 & 정책 -->
+          <div class="footer-section">
+            <h3 class="footer-title">약관</h3>
+            <a href="#" class="footer-link">이용약관</a>
+            <a href="#" class="footer-link">개인정보처리방침</a>
+            <a href="#" class="footer-link">이메일무단수집거부</a>
+            <a href="#" class="footer-link">뉴스레터 구독</a>
+          </div>
+
+          <!-- 연락처 -->
+          <div class="footer-section">
+            <h3 class="footer-title">Contact Us</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: var(--font-size-sm); line-height: var(--line-height-relaxed)">
+              전화: 02-1234-5678<br />
+              이메일: info@woodplace.com<br />
+              운영시간: 평일 10:00 ~ 18:00<br />
+              (토요일, 일요일 휴무)
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            © 2026 WOODPLACE. All rights reserved.
+          </div>
+          <div class="footer-social">
+            <a href="#" class="social-link" title="페이스북">
+              <span class="material-icons">facebook</span>
+            </a>
+            <a href="#" class="social-link" title="인스타그램">
+              <span class="material-icons">instagram</span>
+            </a>
+            <a href="#" class="social-link" title="트위터">
+              <span class="material-icons">twitter</span>
+            </a>
+            <a href="#" class="social-link" title="유튜브">
+              <span class="material-icons">youtube_activity</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/common.js"></script>
+    <script>
+      /**
+       * 장바구니 페이지 JavaScript
+       */
+
+      const cartItemsContainer = document.getElementById('cartItems');
+      const cartSummary = document.getElementById('cartSummary');
+
+      /**
+       * 장바구니 렌더링
+       */
+      function renderCart() {
+        const items = Cart.getItems();
+
+        // 장바구니가 비어있는 경우
+        if (items.length === 0) {
+          cartItemsContainer.innerHTML = `
+            <div class="empty-cart">
+              <div class="empty-cart-icon">
+                <span class="material-icons" style="font-size: 64px; display: block">
+                  shopping_cart
+                </span>
+              </div>
+              <div class="empty-cart-text">장바구니가 비어있습니다</div>
+              <a href="product-list.html" class="btn btn-primary">
+                쇼핑 계속하기
+              </a>
+            </div>
+          `;
+          cartSummary.style.display = 'none';
+          return;
+        }
+
+        // 장바구니 아이템 렌더링
+        cartItemsContainer.innerHTML = items
+          .map(
+            (item) => `
+          <div class="cart-item" data-item-id="${item.id}">
+            <div class="cart-item-image">
+              <img src="${item.image || 'images/placeholder-furniture.jpg'}" alt="${item.name}" />
+            </div>
+            <div class="cart-item-content">
+              <div class="cart-item-name">${item.name}</div>
+              <div class="cart-item-price">${Format.price(item.price)}원</div>
+            </div>
+            <div class="cart-item-actions">
+              <div style="display: flex; align-items: center; gap: var(--spacing-md); margin-bottom: var(--spacing-md)">
+                <div class="quantity-control">
+                  <button class="quantity-btn" type="button" data-action="decrease">−</button>
+                  <input type="number" class="quantity-input" value="${item.quantity}" min="1" data-item-id="${item.id}" />
+                  <button class="quantity-btn" type="button" data-action="increase">+</button>
+                </div>
+                <div style="font-weight: var(--font-weight-bold); min-width: 120px; text-align: right">
+                  ${Format.price(item.price * item.quantity)}원
+                </div>
+              </div>
+              <button class="cart-remove-btn" type="button" data-item-id="${item.id}" title="삭제">
+                <span class="material-icons">close</span>
+              </button>
+            </div>
+          </div>
+        `
+          )
+          .join('');
+
+        // 요약 정보 업데이트
+        updateSummary();
+        cartSummary.style.display = 'block';
+
+        // 이벤트 리스너 추가
+        attachEventListeners();
+      }
+
+      /**
+       * 주문 요약 업데이트
+       */
+      function updateSummary() {
+        const subtotal = Cart.getTotalPrice();
+        const shipping = 0; // 무료 배송
+        const total = subtotal + shipping;
+
+        document.getElementById('subtotal').textContent = Format.price(subtotal) + '원';
+        document.getElementById('shipping').textContent =
+          shipping === 0 ? '무료' : Format.price(shipping) + '원';
+        document.getElementById('total').textContent = Format.price(total) + '원';
+      }
+
+      /**
+       * 이벤트 리스너 추가
+       */
+      function attachEventListeners() {
+        // 수량 증감 버튼
+        document.querySelectorAll('.quantity-btn').forEach((btn) => {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const action = btn.getAttribute('data-action');
+            const input = btn.closest('.quantity-control').querySelector('.quantity-input');
+            const itemId = parseInt(input.getAttribute('data-item-id'));
+            let quantity = parseInt(input.value);
+
+            if (action === 'increase') {
+              quantity++;
+            } else if (action === 'decrease' && quantity > 1) {
+              quantity--;
+            }
+
+            Cart.updateQuantity(itemId, quantity);
+            renderCart();
+          });
+        });
+
+        // 수량 입력 필드
+        document.querySelectorAll('.quantity-input').forEach((input) => {
+          input.addEventListener('change', () => {
+            const itemId = parseInt(input.getAttribute('data-item-id'));
+            let quantity = parseInt(input.value);
+
+            if (isNaN(quantity) || quantity < 1) {
+              quantity = 1;
+            }
+
+            Cart.updateQuantity(itemId, quantity);
+            renderCart();
+          });
+        });
+
+        // 삭제 버튼
+        document.querySelectorAll('.cart-remove-btn').forEach((btn) => {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const itemId = parseInt(btn.getAttribute('data-item-id'));
+
+            if (confirm('상품을 삭제하시겠습니까?')) {
+              Cart.removeItem(itemId);
+              renderCart();
+            }
+          });
+        });
+      }
+
+      /**
+       * 결제 버튼
+       */
+      document.addEventListener('DOMContentLoaded', () => {
+        renderCart();
+
+        const checkoutBtn = document.querySelector('.checkout-btn');
+        if (checkoutBtn) {
+          checkoutBtn.addEventListener('click', () => {
+            const user = Storage.get('user');
+
+            if (!user) {
+              alert('로그인 후 결제가 가능합니다.');
+              window.location.href = 'login.html';
+              return;
+            }
+
+            alert('결제 페이지로 이동합니다.');
+            // 실제 환경에서는 결제 페이지로 이동
+            // window.location.href = 'checkout.html';
+          });
+        }
+      });
+
+      /**
+       * 검색 폼
+       */
+      const searchForm = document.getElementById('searchForm');
+      if (searchForm) {
+        searchForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const keyword = document.getElementById('searchInput').value.trim();
+          if (keyword) {
+            window.location.href = `search.html?q=${encodeURIComponent(keyword)}`;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

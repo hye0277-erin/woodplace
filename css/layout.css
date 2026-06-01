@@ -1,0 +1,230 @@
+/* Layout Wrappers */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Header Component */
+.site-header {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-gray-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.header-inner {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    position: relative;
+}
+.header-logo {
+    flex-shrink: 0;
+    font-family: var(--font-serif);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+.header-nav {
+    flex: 1;
+}
+.header-nav .nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+.header-nav .nav-link {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-gray-dark);
+    position: relative;
+    padding: 8px 0;
+}
+.header-nav .nav-link:hover {
+    color: var(--color-black);
+}
+.header-util {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+}
+.search-box {
+    position: relative;
+    width: 200px;
+}
+.search-input {
+    width: 100%;
+    height: 36px;
+    border-bottom: 1px solid var(--color-black);
+    font-size: 14px;
+    padding-right: 28px;
+}
+.search-btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.util-icon-list {
+    display: flex;
+    gap: 16px;
+}
+.util-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+.mobile-menu-btn {
+    display: none;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+.mobile-menu-btn .material-symbols-outlined,
+.util-icon-link .material-symbols-outlined,
+.search-btn .material-symbols-outlined {
+    font-size: 24px;
+}
+
+/* Footer Component */
+.site-footer {
+    background-color: #2A2624; /* 시안 하단의 어두운 브라운 딥 그레이 */
+    color: #A8A29D;
+    padding: 60px 0 40px 0;
+    margin-top: 120px;
+    font-size: 14px;
+}
+.footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #3E3835;
+}
+.footer-info .footer-logo {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+.footer-title {
+    color: var(--color-white);
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+.footer-links li {
+    margin-bottom: 8px;
+}
+.footer-links a:hover {
+    color: var(--color-white);
+}
+.footer-contact .phone {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 8px;
+}
+.footer-bottom {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+/* Responsive (Mobile-first fallback / PC 우선 대응 처리) */
+@media (max-width: 1280px) {
+    .header-inner { gap: 20px; }
+    .header-nav .nav-list { gap: 22px; }
+    .search-box { width: 160px; }
+}
+@media (max-width: 1024px) {
+    .header-inner {
+        height: 68px;
+    }
+    .header-logo {
+        font-size: 22px;
+    }
+    .mobile-menu-btn {
+        display: flex;
+        order: 3;
+    }
+    .header-nav {
+        position: absolute;
+        top: 100%;
+        left: 40px;
+        right: 40px;
+        flex: none;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        background-color: var(--color-white);
+        border: 1px solid var(--color-gray-border);
+        border-top: none;
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+        transition: max-height 0.25s ease, opacity 0.2s ease;
+    }
+    .site-header.is-menu-open .header-nav {
+        max-height: 420px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .header-nav .nav-list {
+        display: block;
+        padding: 12px 0;
+    }
+    .header-nav .nav-link {
+        display: block;
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+    .header-nav .nav-link:hover {
+        background-color: var(--color-bg);
+    }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    .header-nav {
+        left: 20px;
+        right: 20px;
+    }
+    .header-util {
+        gap: 14px;
+        margin-left: auto;
+    }
+    .search-box {
+        display: none;
+    }
+    .util-icon-list {
+        gap: 12px;
+    }
+    .footer-inner { grid-template-columns: 1fr; gap: 30px; }
+    .footer-bottom { flex-direction: column; gap: 10px; }
+}
+@media (max-width: 480px) {
+    .header-logo {
+        font-size: 19px;
+    }
+    .util-icon-list {
+        gap: 8px;
+    }
+    .util-icon-link {
+        width: 22px;
+        height: 22px;
+    }
+    .mobile-menu-btn {
+        width: 36px;
+        height: 36px;
+    }
+}

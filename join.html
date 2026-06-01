@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 - WOODPLACE</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="header-logo"><a href="index.html">WOODPLACE</a></h1>
+            <button type="button" class="mobile-menu-btn" aria-controls="primaryNav" aria-expanded="false" aria-label="메뉴 열기">
+                <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+            </button>
+            <nav class="header-nav" id="primaryNav">
+                <ul class="nav-list">
+                    <li><a href="product-list.html" class="nav-link">전체메뉴</a></li>
+                    <li><a href="product-list.html" class="nav-link">거실</a></li>
+                    <li><a href="product-list.html" class="nav-link">침실</a></li>
+                    <li><a href="product-list.html" class="nav-link">주방·식탁</a></li>
+                    <li><a href="product-list.html" class="nav-link">수납·서재</a></li>
+                    <li><a href="product-list.html" class="nav-link">아웃도어 소품</a></li>
+                </ul>
+            </nav>
+            <div class="header-util">
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="검색어를 입력하세요">
+                    <button type="button" class="search-btn">
+                        <span class="material-symbols-outlined" aria-hidden="true">search</span>
+                    </button>
+                </div>
+                <div class="util-icon-list">
+                    <a href="login.html" class="util-icon-link" title="로그인">
+                        <span class="material-symbols-outlined" aria-hidden="true">person</span>
+                    </a>
+                    <a href="#" class="util-icon-link" title="찜한 상품">
+                        <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                    </a>
+                    <a href="cart.html" class="util-icon-link" title="장바구니">
+                        <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="auth-wrapper">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>회원가입</span>
+        </div>
+
+        <div class="auth-container">
+            <h2 class="auth-title">Join Us</h2>
+            
+            <form action="#" method="POST" id="joinForm">
+                <div class="input-group">
+                    <label for="joinEmail" class="input-label">이메일 주소 (아이디) *</label>
+                    <input type="email" id="joinEmail" class="input-text" required placeholder="example@woodplace.com">
+                </div>
+                
+                <div class="input-group">
+                    <label for="joinPw" class="input-label">비밀번호 *</label>
+                    <input type="password" id="joinPw" class="input-text" required placeholder="영문, 숫자 포함 8자 이상">
+                </div>
+
+                <div class="input-group">
+                    <label for="joinPwConfirm" class="input-label">비밀번호 확인 *</label>
+                    <input type="password" id="joinPwConfirm" class="input-text" required placeholder="비밀번호를 한번 더 입력해 주세요">
+                </div>
+
+                <div class="input-group">
+                    <label for="joinName" class="input-label">이름 *</label>
+                    <input type="text" id="joinName" class="input-text" required placeholder="이름을 입력해 주세요">
+                </div>
+
+                <div class="input-group">
+                    <label for="joinPhone" class="input-label">휴대폰 번호 *</label>
+                    <input type="tel" id="joinPhone" class="input-text" required placeholder="010-0000-0000">
+                </div>
+
+                <div class="input-group join-agree-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="agreeTerm" required>
+                        <span><strong>[필수]</strong> 이용약관 및 개인정보 처리방침 동의</span>
+                    </label>
+                    <div class="form-policy-box">
+                        우드플레이스 쇼핑몰 서비스 이용을 위해 상기 약관에 동의합니다. 본 약관은 서비스 이용자가 당사에서 제공하는 가구 및 인테리어 소품 쇼핑몰 서비스를 이용함에 있어 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다...
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-accent join-submit-btn">가입 완료하기</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-info">
+                    <h3 class="footer-logo">WOODPLACE</h3>
+                    <p>일상의 미학을 완성하는 친환경 가구 브랜드</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Menu</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">브랜드 스토리</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">매장 안내</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">1:1 문의</a></li>
+                        <li><a href="#">배송/교환/반품</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <p class="phone">1644-0000</p>
+                    <p>평일 10:00 - 17:00 (주말/공휴일 휴무)</p>
+                    <p>cs@woodplace.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 WOODPLACE. All Rights Reserved.</p>
+                <p>이용약관 | 개인정보처리방침</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+</body>
+</html>
