@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 리스트 - WOODPLACE</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+    <div data-include="header.html"></div>
+
+    <main class="catalog-page">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="현재 위치">
+                <a href="index.html">Home</a>
+                <span>전체 상품</span>
+            </nav>
+
+            <section class="listing-hero">
+                <span class="section-category">Collection</span>
+                <h2 class="section-title">전체 상품</h2>
+                <p>공간의 분위기를 완성하는 우드플레이스의 가구와 오브제를 만나보세요.</p>
+            </section>
+
+            <div class="listing-layout">
+                <aside class="listing-sidebar" aria-label="상품 필터">
+                    <div class="filter-panel">
+                        <h3 class="filter-title">Filter</h3>
+                        <div class="filter-group">
+                            <strong>카테고리</strong>
+                            <ul class="filter-list">
+                                <li><label class="checkbox-label"><input type="checkbox" checked><span>전체</span></label></li>
+                                <li><label class="checkbox-label"><input type="checkbox"><span>거실</span></label></li>
+                                <li><label class="checkbox-label"><input type="checkbox"><span>침실</span></label></li>
+                                <li><label class="checkbox-label"><input type="checkbox"><span>주방·식탁</span></label></li>
+                                <li><label class="checkbox-label"><input type="checkbox"><span>수납·서재</span></label></li>
+                            </ul>
+                        </div>
+                        <div class="filter-group">
+                            <strong>가격대</strong>
+                            <ul class="filter-list">
+                                <li><label class="checkbox-label"><input type="checkbox"><span>50만원 이하</span></label></li>
+                                <li><label class="checkbox-label"><input type="checkbox"><span>50만원 - 100만원</span></label></li>
+                                <li><label class="checkbox-label"><input type="checkbox"><span>100만원 - 300만원</span></label></li>
+                                <li><label class="checkbox-label"><input type="checkbox"><span>300만원 이상</span></label></li>
+                            </ul>
+                        </div>
+                        <div class="filter-group">
+                            <strong>색상</strong>
+                            <div class="color-filter">
+                                <button type="button" class="color-swatch is-selected" style="--swatch:#B68A63" aria-label="브라운"></button>
+                                <button type="button" class="color-swatch" style="--swatch:#E9E1D7" aria-label="아이보리"></button>
+                                <button type="button" class="color-swatch" style="--swatch:#34302C" aria-label="블랙"></button>
+                                <button type="button" class="color-swatch" style="--swatch:#9B9A8C" aria-label="그레이"></button>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <strong>소재</strong>
+                            <ul class="filter-list">
+                                <li><label class="checkbox-label"><input type="checkbox"><span>원목</span></label></li>
+                                <li><label class="checkbox-label"><input type="checkbox"><span>패브릭</span></label></li>
+                                <li><label class="checkbox-label"><input type="checkbox"><span>레더</span></label></li>
+                                <li><label class="checkbox-label"><input type="checkbox"><span>메탈</span></label></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+
+                <section class="listing-main">
+                    <div class="category-tabs" aria-label="상품 카테고리">
+                        <a href="#" class="is-active">전체</a>
+                        <a href="#">소파</a>
+                        <a href="#">체어</a>
+                        <a href="#">테이블</a>
+                        <a href="#">조명</a>
+                    </div>
+
+                    <div class="listing-toolbar">
+                        <p>총 <strong>24</strong>개의 상품</p>
+                        <select class="sort-select" aria-label="상품 정렬">
+                            <option>추천순</option>
+                            <option>신상품순</option>
+                            <option>낮은 가격순</option>
+                            <option>높은 가격순</option>
+                        </select>
+                    </div>
+
+                    <div class="catalog-grid">
+                        <article class="product-card"><div class="product-thumb"><img src="images/section1_01.jpg" alt="Simplus Sofa"><button type="button" class="product-wish-btn" title="찜하기"><span class="material-symbols-outlined" aria-hidden="true">favorite</span></button></div><div class="product-info"><span class="product-brand">Simplus Sofa</span><h4 class="product-name">자연을 머금은 패브릭 소파</h4><p class="product-price">1,810,000원</p></div></article>
+                        <article class="product-card"><div class="product-thumb"><img src="images/section1_02.jpg" alt="Meltis Armchair"><button type="button" class="product-wish-btn" title="찜하기"><span class="material-symbols-outlined" aria-hidden="true">favorite</span></button></div><div class="product-info"><span class="product-brand">Meltis Armchair</span><h4 class="product-name">모던 레더 디자이너 암체어</h4><p class="product-price">5,390,000원</p></div></article>
+                        <article class="product-card"><div class="product-thumb"><img src="images/section1_03.jpg" alt="Louis Side Table"><button type="button" class="product-wish-btn" title="찜하기"><span class="material-symbols-outlined" aria-hidden="true">favorite</span></button></div><div class="product-info"><span class="product-brand">Louis Side Table</span><h4 class="product-name">라운드 원목 미니 테이블</h4><p class="product-price">659,000원</p></div></article>
+                        <article class="product-card"><div class="product-thumb"><img src="images/section1_04.jpg" alt="Sioer Refit"><button type="button" class="product-wish-btn" title="찜하기"><span class="material-symbols-outlined" aria-hidden="true">favorite</span></button></div><div class="product-info"><span class="product-brand">Sioer Refit</span><h4 class="product-name">은은하게 빛나는 무드 펜던트 조명</h4><p class="product-price">1,320,000원</p></div></article>
+                        <article class="product-card"><div class="product-thumb"><img src="images/section2_01.jpg" alt="Maison Dining Set"><button type="button" class="product-wish-btn" title="찜하기"><span class="material-symbols-outlined" aria-hidden="true">favorite</span></button></div><div class="product-info"><span class="product-brand">Maison Dining</span><h4 class="product-name">내추럴 우드 다이닝 세트</h4><p class="product-price">2,480,000원</p></div></article>
+                        <article class="product-card"><div class="product-thumb"><img src="images/section4_01.jpg" alt="Rouve Lounge Chair"><button type="button" class="product-wish-btn" title="찜하기"><span class="material-symbols-outlined" aria-hidden="true">favorite</span></button></div><div class="product-info"><span class="product-brand">Rouve Chair</span><h4 class="product-name">곡선형 우드 라운지 체어</h4><p class="product-price">920,000원</p></div></article>
+                        <article class="product-card"><div class="product-thumb"><img src="images/hero_bg.jpg" alt="Aube Cabinet"><button type="button" class="product-wish-btn" title="찜하기"><span class="material-symbols-outlined" aria-hidden="true">favorite</span></button></div><div class="product-info"><span class="product-brand">Aube Cabinet</span><h4 class="product-name">정갈한 수납 오크 캐비닛</h4><p class="product-price">1,650,000원</p></div></article>
+                        <article class="product-card"><div class="product-thumb"><img src="images/section1_01.jpg" alt="Cloud Bench"><button type="button" class="product-wish-btn" title="찜하기"><span class="material-symbols-outlined" aria-hidden="true">favorite</span></button></div><div class="product-info"><span class="product-brand">Cloud Bench</span><h4 class="product-name">소프트 패브릭 벤치</h4><p class="product-price">740,000원</p></div></article>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div data-include="footer.html"></div>
+
+    <script src="js/common.js"></script>
+</body>
+</html>

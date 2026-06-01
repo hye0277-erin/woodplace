@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -10,49 +10,9 @@
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="container header-inner">
-            <h1 class="header-logo"><a href="index.html">WOODPLACE</a></h1>
-            <button type="button" class="mobile-menu-btn" aria-controls="primaryNav" aria-expanded="false" aria-label="메뉴 열기">
-                <span class="material-symbols-outlined" aria-hidden="true">menu</span>
-            </button>
-            <nav class="header-nav" id="primaryNav">
-                <ul class="nav-list">
-                    <li><a href="product-list.html" class="nav-link">전체메뉴</a></li>
-                    <li><a href="product-list.html" class="nav-link">거실</a></li>
-                    <li><a href="product-list.html" class="nav-link">침실</a></li>
-                    <li><a href="product-list.html" class="nav-link">주방·식탁</a></li>
-                    <li><a href="product-list.html" class="nav-link">수납·서재</a></li>
-                    <li><a href="product-list.html" class="nav-link">아웃도어 소품</a></li>
-                </ul>
-            </nav>
-            <div class="header-util">
-                <div class="search-box">
-                    <input type="text" class="search-input" placeholder="검색어를 입력하세요">
-                    <button type="button" class="search-btn">
-                        <span class="material-symbols-outlined" aria-hidden="true">search</span>
-                    </button>
-                </div>
-                <div class="util-icon-list">
-                    <a href="login.html" class="util-icon-link" title="로그인">
-                        <span class="material-symbols-outlined" aria-hidden="true">person</span>
-                    </a>
-                    <a href="#" class="util-icon-link" title="찜한 상품">
-                        <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
-                    </a>
-                    <a href="cart.html" class="util-icon-link" title="장바구니">
-                        <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <div data-include="header.html"></div>
 
     <main class="auth-wrapper">
-        <div class="breadcrumb">
-            <a href="index.html">Home</a>
-            <span>회원가입</span>
-        </div>
 
         <div class="auth-container">
             <h2 class="auth-title">Join Us</h2>
@@ -98,42 +58,7 @@
         </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-inner">
-                <div class="footer-info">
-                    <h3 class="footer-logo">WOODPLACE</h3>
-                    <p>일상의 미학을 완성하는 친환경 가구 브랜드</p>
-                </div>
-                <div>
-                    <h4 class="footer-title">Menu</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">브랜드 스토리</a></li>
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">매장 안내</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="footer-title">Support</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">고객센터</a></li>
-                        <li><a href="#">1:1 문의</a></li>
-                        <li><a href="#">배송/교환/반품</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4 class="footer-title">Contact Us</h4>
-                    <p class="phone">1644-0000</p>
-                    <p>평일 10:00 - 17:00 (주말/공휴일 휴무)</p>
-                    <p>cs@woodplace.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 WOODPLACE. All Rights Reserved.</p>
-                <p>이용약관 | 개인정보처리방침</p>
-            </div>
-        </div>
-    </footer>
+    <div data-include="footer.html"></div>
 
     <script src="js/common.js"></script>
 </body>
