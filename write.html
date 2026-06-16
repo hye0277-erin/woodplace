@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 쓰기 - WOODPLACE</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/board.css">
+</head>
+<body>
+
+    <div data-include="header.html"></div>
+
+    <main class="board-page">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="현재 위치">
+                <a href="index.html">Home</a>
+                <a href="board.html">게시판</a>
+                <span>게시글 쓰기</span>
+            </nav>
+
+            <section class="listing-hero board-hero">
+                <span class="section-category">Community</span>
+                <h2 class="section-title">게시글 쓰기</h2>
+                <p>문의 내용과 연락 가능한 정보를 정확히 남겨주세요.</p>
+            </section>
+
+            <form class="board-panel board-write-form" action="#" method="post">
+                <div class="board-form-grid">
+                    <div class="board-field">
+                        <label for="postCategory">분류</label>
+                        <select id="postCategory" name="category" required>
+                            <option value="">분류 선택</option>
+                            <option value="notice">공지사항</option>
+                            <option value="event">이벤트</option>
+                            <option value="qna">상품문의</option>
+                            <option value="review">후기</option>
+                        </select>
+                    </div>
+                    <div class="board-field">
+                        <label for="postWriter">작성자</label>
+                        <input type="text" id="postWriter" name="writer" placeholder="작성자명을 입력하세요" required>
+                    </div>
+                </div>
+
+                <div class="board-field">
+                    <label for="postTitle">제목</label>
+                    <input type="text" id="postTitle" name="title" placeholder="제목을 입력하세요" required>
+                </div>
+
+                <div class="board-field">
+                    <label for="postContent">내용</label>
+                    <textarea id="postContent" name="content" rows="12" placeholder="내용을 입력하세요" required></textarea>
+                </div>
+
+                <div class="board-form-grid">
+                    <div class="board-field">
+                        <label for="postPassword">비밀번호</label>
+                        <input type="password" id="postPassword" name="password" placeholder="수정/삭제용 비밀번호" required>
+                    </div>
+                    <div class="board-field">
+                        <label for="postFile">첨부파일</label>
+                        <input type="file" id="postFile" name="attachment">
+                    </div>
+                </div>
+
+                <label class="checkbox-label board-secret">
+                    <input type="checkbox" name="secret">
+                    <span>비밀글로 등록</span>
+                </label>
+
+                <div class="board-actions">
+                    <a href="board.html" class="btn btn-outline">취소</a>
+                    <button type="submit" class="btn btn-accent">등록</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <div data-include="footer.html"></div>
+
+    <script src="js/common.js"></script>
+</body>
+</html>

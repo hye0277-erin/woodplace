@@ -315,19 +315,32 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // 7. 브랜드 스토리 썸네일 이미지 전환
-    const storyImage = document.querySelector('.story-image-area img');
-    const storyThumbs = document.querySelectorAll('.story-meta-item[data-story-image]');
+    const brandStorySection = document.querySelector('.brand-story-section');
 
-    if (storyImage && storyThumbs.length) {
-        storyThumbs.forEach((thumb) => {
-            thumb.addEventListener('click', () => {
-                storyImage.src = thumb.dataset.storyImage;
-                storyImage.alt = thumb.dataset.storyAlt || '';
+    if (brandStorySection) {
+        const storyImage = brandStorySection.querySelector('.story-image-area img');
+        const storyThumbs = brandStorySection.querySelectorAll('.story-meta-item[data-story-image]');
 
-                storyThumbs.forEach((item) => item.classList.remove('is-active'));
-                thumb.classList.add('is-active');
+        const updateStoryImage = (thumb) => {
+            if (!storyImage || !thumb) return;
+
+            storyImage.src = thumb.dataset.storyImage;
+            storyImage.alt = thumb.dataset.storyAlt || '';
+
+            storyThumbs.forEach((item) => {
+                const isActive = item === thumb;
+                item.classList.toggle('is-active', isActive);
+                item.setAttribute('aria-pressed', String(isActive));
             });
-        });
+        };
+
+        if (storyImage && storyThumbs.length) {
+            updateStoryImage(brandStorySection.querySelector('.story-meta-item.is-active') || storyThumbs[0]);
+
+            storyThumbs.forEach((thumb) => {
+                thumb.addEventListener('click', () => updateStoryImage(thumb));
+            });
+        }
     }
 
     // 8. 회원가입 패스워드 일치 확인 프론트 밸리데이션 예시

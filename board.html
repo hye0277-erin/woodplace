@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 - WOODPLACE</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/board.css">
+</head>
+<body>
+
+    <div data-include="header.html"></div>
+
+    <main class="board-page">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="현재 위치">
+                <a href="index.html">Home</a>
+                <span>게시판</span>
+            </nav>
+
+            <section class="listing-hero board-hero">
+                <span class="section-category">Community</span>
+                <h2 class="section-title">게시판</h2>
+                <p>공지사항, 이벤트, 상품 문의를 한곳에서 확인해보세요.</p>
+            </section>
+
+            <section class="board-summary" aria-label="게시판 요약">
+                <article>
+                    <span class="material-symbols-outlined" aria-hidden="true">campaign</span>
+                    <strong>공지사항</strong>
+                    <p>배송, 운영 일정, 쇼룸 안내</p>
+                </article>
+                <article>
+                    <span class="material-symbols-outlined" aria-hidden="true">redeem</span>
+                    <strong>이벤트</strong>
+                    <p>시즌 프로모션과 회원 혜택</p>
+                </article>
+                <article>
+                    <span class="material-symbols-outlined" aria-hidden="true">forum</span>
+                    <strong>상품 문의</strong>
+                    <p>제품, 설치, 관리 상담</p>
+                </article>
+            </section>
+
+            <section class="board-panel" aria-label="게시글 목록">
+                <div class="board-tabs" role="tablist" aria-label="게시판 카테고리">
+                    <button type="button" class="is-active">전체</button>
+                    <button type="button">공지사항</button>
+                    <button type="button">이벤트</button>
+                    <button type="button">상품문의</button>
+                    <button type="button">후기</button>
+                </div>
+
+                <div class="board-toolbar">
+                    <p>총 <strong>18</strong>개의 게시글</p>
+                    <form class="board-search" action="#" aria-label="게시판 검색">
+                        <select aria-label="검색 범위">
+                            <option>제목</option>
+                            <option>내용</option>
+                            <option>작성자</option>
+                        </select>
+                        <input type="search" placeholder="검색어를 입력하세요" aria-label="검색어">
+                        <button type="submit" class="btn btn-primary">검색</button>
+                    </form>
+                </div>
+
+                <div class="board-table-wrap">
+                    <table class="board-table">
+                        <caption>WOODPLACE 게시판 글 목록</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">분류</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">작성자</th>
+                                <th scope="col">등록일</th>
+                                <th scope="col">조회</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="is-notice">
+                                <td><span class="board-badge">공지</span></td>
+                                <td>공지사항</td>
+                                <td class="board-title-cell"><a href="view.html">6월 쇼룸 휴무 및 상담 운영 안내</a></td>
+                                <td>WOODPLACE</td>
+                                <td>2026.06.10</td>
+                                <td>248</td>
+                            </tr>
+                            <tr class="is-notice">
+                                <td><span class="board-badge">공지</span></td>
+                                <td>배송</td>
+                                <td class="board-title-cell"><a href="view.html">대형 가구 배송 전 확인사항 안내</a></td>
+                                <td>WOODPLACE</td>
+                                <td>2026.06.03</td>
+                                <td>315</td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>이벤트</td>
+                                <td class="board-title-cell"><a href="view.html">썸머 메종 컬렉션 구매 고객 사은품 증정</a></td>
+                                <td>WOODPLACE</td>
+                                <td>2026.06.12</td>
+                                <td>92</td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>상품문의</td>
+                                <td class="board-title-cell"><a href="view.html">오크 다이닝 테이블 상판 관리 방법이 궁금합니다</a></td>
+                                <td>김민서</td>
+                                <td>2026.06.11</td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>후기</td>
+                                <td class="board-title-cell"><a href="view.html">판교 쇼룸 방문 후 소파 구매했어요</a></td>
+                                <td>이하준</td>
+                                <td>2026.06.09</td>
+                                <td>67</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>상품문의</td>
+                                <td class="board-title-cell"><a href="view.html">라운지 체어 패브릭 색상 변경 가능한가요?</a></td>
+                                <td>박서연</td>
+                                <td>2026.06.08</td>
+                                <td>41</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>공지사항</td>
+                                <td class="board-title-cell"><a href="view.html">회원 등급별 적립 혜택 변경 안내</a></td>
+                                <td>WOODPLACE</td>
+                                <td>2026.06.05</td>
+                                <td>126</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>상품문의</td>
+                                <td class="board-title-cell"><a href="view.html">설치 기사 방문 시간은 어떻게 지정하나요?</a></td>
+                                <td>최윤아</td>
+                                <td>2026.06.02</td>
+                                <td>58</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="board-bottom">
+                    <nav class="pagination" aria-label="게시판 페이지">
+                        <a href="#" aria-label="이전 페이지"><span class="material-symbols-outlined" aria-hidden="true">chevron_left</span></a>
+                        <a href="#" class="is-active" aria-current="page">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#" aria-label="다음 페이지"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></a>
+                    </nav>
+                    <a href="write.html" class="btn btn-accent board-write-btn">
+                        <span class="material-symbols-outlined" aria-hidden="true">edit</span>
+                        글쓰기
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div data-include="footer.html"></div>
+
+    <script src="js/common.js"></script>
+</body>
+</html>
